@@ -33,7 +33,7 @@ import os
 # ==== DAILY DATA BLOCK — the only part edited each day ======================
 NEWSLETTER = {
     "meta": {
-        "brandIcon": "html-newsletter-template/project/assets/vvr-icon.png",
+        "brandIcon": "https://raw.githubusercontent.com/jacobvip/viral-video-report/main/html-newsletter-template/project/assets/vvr-icon.png",
         "wordmarkPre": "Viral Video ",
         "wordmarkAccent": "Report",
         "tagline": "Your daily short-form video trend brief — what's new, what's accelerating, what to copy.",

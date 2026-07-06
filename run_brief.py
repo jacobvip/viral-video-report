@@ -131,7 +131,7 @@ def build(snapshot, memory, today):
     d = datetime.date.fromisoformat(today)
     newsletter = {
         "meta": {
-            "brandIcon": os.environ.get("VVR_BRAND_ICON", ""),
+            "brandIcon": os.environ.get("VVR_BRAND_ICON", "https://raw.githubusercontent.com/jacobvip/viral-video-report/main/html-newsletter-template/project/assets/vvr-icon.png"),
             "wordmarkPre": "Viral Video ", "wordmarkAccent": "Report",
             "tagline": "Your daily short-form video trend brief — what's new, what's accelerating, what to copy.",
             "issueLine": f"{d:%A} · {d:%B} {d.day}, {d.year} · Issue {issue_no:03d}",
