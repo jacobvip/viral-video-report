@@ -1,0 +1,28 @@
+# --- secrets (NEVER commit) ---
+.env
+.env.local
+*.key
+*.pem
+
+# --- python ---
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# --- macOS ---
+.DS_Store
+
+# --- downloaded media (large, regenerable) ---
+downloads/
+downloads_sza/
+
+# --- generated email output (regenerate: python3 vvr_generator.py / run_brief.py) ---
+viral-video-report.html
+issue-*.html
+
+# --- large reference PDFs from the Claude Design handoff ---
+*.pdf
+
+# --- logs ---
+logs/*.log

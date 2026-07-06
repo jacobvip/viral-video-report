@@ -1,0 +1,76 @@
+{
+  "trends": {
+    "lyric-edit": {
+      "name": "The lyric-edit format",
+      "status": "cooling",
+      "last_featured": "2026-07-06",
+      "times_featured": 1,
+      "section": "new"
+    },
+    "lego-ministrybricks": {
+      "name": "LEGO builds (the @ministrybricks format)",
+      "status": "cooling",
+      "last_featured": "2026-07-05",
+      "times_featured": 1,
+      "section": "new"
+    },
+    "choice-challenge": {
+      "name": "The “choose one” choice challenge",
+      "status": "steady · 416M-view peak",
+      "last_featured": "2026-07-05",
+      "times_featured": 1,
+      "section": "new"
+    },
+    "classical-piano-edits": {
+      "name": "Dramatic classical-piano edits (Lacrimosa)",
+      "status": "climbing · 4.1M avg views",
+      "last_featured": "2026-07-05",
+      "times_featured": 1,
+      "section": "new"
+    },
+    "saxophone-build-up": {
+      "name": "The saxophone build-up",
+      "times_featured": 1,
+      "status": "new · rising",
+      "last_featured": "2026-07-07",
+      "section": "new"
+    }
+  },
+  "watching": [
+    "is-it-cool-sza",
+    "dai-dai-worldcup",
+    "ephemeral-yasuhiro"
+  ],
+  "reports": [
+    {
+      "date": "2026-07-06",
+      "issue": 1,
+      "new": [
+        "lyric-edit"
+      ],
+      "accelerating": [
+        "is-it-cool-sza",
+        "dai-dai-worldcup",
+        "ephemeral-yasuhiro"
+      ],
+      "recreation": "lyric-edit"
+    },
+    {
+      "date": "2026-07-07",
+      "issue": 2,
+      "new": [
+        "saxophone-build-up"
+      ],
+      "accelerating": [
+        "is-it-cool-sza",
+        "dai-dai-worldcup"
+      ],
+      "recreation": "saxophone-build-up"
+    }
+  ],
+  "meta": {
+    "last_updated": "2026-07-07",
+    "report_count": 2,
+    "dedup_window_days": 7
+  }
+}

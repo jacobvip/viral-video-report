@@ -1,0 +1,53 @@
+You are producing today's Viral Video Report — a change-led daily short-form-video
+trend brief. Work in this project directory. Do the steps in order.
+
+STEP 0 — READ MEMORY
+- Read vvr-trends-db.json. Note each trend's last_featured, the most recent reports
+  entry (what yesterday sent), and the watching list. Compute today's date.
+- Dedup rule: any trend whose last_featured is within meta.dedup_window_days (7) of
+  today must NOT be featured again as "New this week" — it may only appear as a
+  one-line "Still running" item. (run_brief.py enforces this, but don't pick a
+  deduped lead.)
+
+STEP 1 — PULL FRESH VIRLO DATA (keep spend <= $0.80)
+- get_credit_balance (free).
+- get_trending_sounds (platform=tiktok, sort=videos_7d, limit=15)  — $0.25
+- get_breakout_sounds (platform=tiktok, limit=15)                  — $0.25
+- Pick the 1-2 most template-looking sounds NOT deduped, and call
+  get_sound_videos (limit=10, sort=views_desc) on each              — $0.25 each
+  to name the shared FORMAT and grab example videos. If budget is tight, do one.
+- Reject anything that is just background music, one creator's personal series, or a
+  single news/tragedy event — those are not templates.
+
+STEP 2 — DECIDE (editorial judgment)
+- Format vs audio wave: a real template has HIGH views-per-clip — a small-follower
+  account still gets big views because the format carries it. Rank by outlier ratio
+  = top-video views / that creator's followers, and by avg views/clip. A hot sound
+  with many posts but LOW views-per-clip is music discovery, NOT a template → it goes
+  to Accelerating, not New this week.
+- Rank by CHANGE, not size: lead with what's new or accelerating vs the DB.
+- New this week = 1-3 genuinely new/re-surging COPYABLE formats (the heart).
+  Accelerating = rising but not yet copyable (say why). Still running is built
+  automatically from memory. Recreation template = a shot list for today's New lead,
+  never the same as yesterday's (check the last report).
+
+STEP 3 — WRITE THE SNAPSHOT, THEN BUILD
+- Write virlo_snapshot.json with this shape (see the committed example):
+  { date, intro{greeting,paragraphs[]}, toc[],
+    new_this_week[{slug,name,sound,status,headline,videos[{handle,meta}],
+                   metrics[{value,label}],lead,details[],why,cta{label,url}}],
+    accelerating_headline, accelerating_lead,
+    accelerating[{slug,name,metric,note}],
+    recreation{slug,headline,lead,steps[],cta} }
+- Run: python3 run_brief.py
+  It assembles the email (dedup applied), renders issue-NNN.html, delivers via
+  Resend (STEP 4), and writes memory back (STEP 5).
+
+STEP 4 — DELIVERY happens inside run_brief.py via send_email (Resend). Set env:
+  RESEND_API_KEY, BRIEF_FROM, BRIEF_TO. Use BRIEF_DRY_RUN=1 to test without sending.
+
+STEP 5 — MEMORY is written back by run_brief.py (new report + bumped meta). Do not
+  edit vvr-trends-db.json by hand.
+
+Report: the issue number, the New this week lead(s), the Accelerating waves, how many
+Still running one-liners, and the Resend message id (or DRY RUN).

@@ -1,0 +1,79 @@
+{
+  "date": "2026-07-07",
+  "source": "virlo",
+  "pull": {
+    "balance_before": "$12.40",
+    "get_trending_sounds": "tiktok / videos_7d / 15",
+    "get_breakout_sounds": "tiktok / 15",
+    "get_sound_videos": ["Saxophones getting louder - Sped Up", "Mozart Lacrimosa"]
+  },
+  "intro": {
+    "greeting": "Good morning,",
+    "paragraphs": [
+      "Today's copyable format is the saxophone build-up: a sped-up sax swells while you build visual tension, then you cut on its peak to the chaos. The tell that it's a real template and not just a hot song — tiny accounts are pulling enormous views (@madeyouduck: 5.6K followers, 22.3M views).",
+      "Meanwhile the loudest sound on the platform, “is it cool?” (SZA × Steve Lacy), is still just music discovery — 261 clips in 7 days but only ~8K views each. Full rundown below."
+    ]
+  },
+  "toc": [
+    "New this week — the saxophone build-up",
+    "Accelerating — the sounds everyone's on",
+    "Still running — formats from the last 7 days",
+    "Recreation template — shoot a saxophone build-up"
+  ],
+  "new_this_week": [
+    {
+      "slug": "saxophone-build-up",
+      "name": "The saxophone build-up",
+      "sound": "Saxophones getting louder - Sped Up",
+      "sound_id": "e8451cfa-d9e9-4be8-86e7-7d76f6829f6d",
+      "status": "new · rising",
+      "headline": "The saxophone build-up",
+      "videos": [
+        {"src": "", "handle": "@madeyouduck", "meta": "22.3M views · 5.6K followers"},
+        {"src": "", "handle": "@nicolenixon02", "meta": "11.7M views · 2.4K followers"},
+        {"src": "", "handle": "@kingfefev", "meta": "8.1M views · 1.5K followers"}
+      ],
+      "metrics": [
+        {"value": "3,950×", "label": "top outlier ratio"},
+        {"value": "392K", "label": "avg views / clip"},
+        {"value": "102", "label": "posts · 7d"}
+      ],
+      "lead": "A sped-up saxophone line swells louder and louder while you build visual tension, then you cut on its peak to a chaotic, awkward, or “oh no” payoff. It's subject-agnostic — a cat, a fox, a food fail, a family moment.",
+      "details": [
+        "Tiny accounts are pulling 8–22M views — @madeyouduck (5.6K followers) hit 22.3M. The crescendo carries it, not the following.",
+        "The rising sax telegraphs that something is coming, so it holds the viewer through the scroll to the reveal.",
+        "Works for any subject: pets, food, travel, family. Swap the payoff and it still lands."
+      ],
+      "why": "Pick one subject and one “oh no” beat. Let the sax swell over the setup, then cut hard to the payoff on the peak — keep it under 15 seconds.",
+      "cta": {"label": "Hear the sound →", "url": "#"}
+    }
+  ],
+  "accelerating_headline": "The sounds everyone's on",
+  "accelerating_lead": "Huge momentum, but no shared format yet — ride the audio, don't expect a template.",
+  "accelerating": [
+    {
+      "slug": "is-it-cool-sza",
+      "name": "“is it cool?” — SZA × Steve Lacy",
+      "metric": "261 clips · 7d",
+      "note": "Still the #1 trending AND #1 breakout sound (score 154), but only ~8K avg views across 261 clips — pure music discovery, no shared format. Ride the audio, don't expect a template."
+    },
+    {
+      "slug": "dai-dai-worldcup",
+      "name": "“Dai Dai” — Shakira & Burna Boy",
+      "metric": "105 clips · 7d",
+      "note": "World Cup audio wave with real reach (416K avg views), but no repeatable beat-structure or gag has formed around it yet."
+    }
+  ],
+  "recreation": {
+    "slug": "saxophone-build-up",
+    "headline": "Shoot a saxophone build-up today",
+    "lead": "Today's New This Week lead, as a four-step shot list.",
+    "steps": [
+      "Start on a calm, normal setup — a pet, a plan, an everyday moment. Bring the sped-up sax in quiet.",
+      "Build visual tension as the saxophone climbs — hold the anticipation, don't cut early.",
+      "Cut hard on the sax's peak to the chaotic or awkward payoff — the “oh no” moment.",
+      "Caption with the one-line setup so it reads muted, and keep the whole thing under 15 seconds."
+    ],
+    "cta": {"label": "Grab the sound →", "url": "#"}
+  }
+}
