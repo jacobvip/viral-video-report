@@ -10,6 +10,9 @@ TIKWM_ENDPOINT = "https://www.tikwm.com/api/"
 
 MS_TOKEN = os.environ.get("MS_TOKEN")
 COUNT = int(os.environ.get("COUNT", "20"))
+# Generator page-size sent to TikTok. ~35 is the sweet spot: yields ~50 unique
+# and ends cleanly (hasMore=false). Higher values trip TikTok error 10201.
+FETCH = int(os.environ.get("FETCH", "35"))
 OUT_DIR = Path(os.environ.get("OUT_DIR", "downloads"))
 
 
@@ -63,7 +66,10 @@ async def main():
         client = httpx.AsyncClient(headers={"user-agent": "Mozilla/5.0"})
 
         i = 0
-        async for video in api.trending.videos(count=COUNT):
+        saved = 0
+        # Modest fetch — deep pagination trips TikTok error 10201. The feed repeats
+        # items, so we stop on TOTAL unique in the folder and top up across re-runs.
+        async for video in api.trending.videos(count=FETCH):
             i += 1
             d = video.as_dict
             vid_id = d.get("id", "unknown")
@@ -125,6 +131,9 @@ async def main():
             }
             manifest.write(json.dumps(record, ensure_ascii=False) + "\n")
             manifest.flush()
+            saved += 1
+            if len(seen_ids) >= COUNT:  # total unique in folder (incl. prior runs)
+                break
 
         await client.aclose()
 

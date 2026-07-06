@@ -26,3 +26,11 @@ issue-*.html
 
 # --- logs ---
 logs/*.log
+
+# session media/data (large or transient)
+breakout_sounds/
+trending_home/
+trending_all/
+sound_audio/
+newsletter_stats.json
+daily_report_data.json
